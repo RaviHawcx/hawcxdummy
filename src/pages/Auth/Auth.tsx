@@ -45,8 +45,7 @@ export default function Auth() {
 
       setStatus("Sent to backend! ✅");
 
-      // ✅ Redirect to home page after 2 seconds (same behavior as Sign-Up)
-      setTimeout(() => navigate(ROUTES.home, { replace: true }), 2000);
+      setTimeout(() => navigate(ROUTES.helloWorld, { replace: true }), 2000);
     } catch (error) {
       setStatus("Something went wrong.");
     }
@@ -58,14 +57,14 @@ export default function Auth() {
         <h2 className="text-xl font-semibold text-center mb-4">Sign In with Biometrics</h2>
         <form className="flex flex-col space-y-4">
           <Input
-            classes="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            classes="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
             type="email"
             placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <Button
-            classes="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition"
+            classes="w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700 transition"
             onClick={handleBiometricAuth}
           >
             Authenticate

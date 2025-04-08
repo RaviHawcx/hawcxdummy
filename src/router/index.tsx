@@ -5,12 +5,14 @@ import Home from "../pages/home";
 import Index from "../pages/index";
 import SignUp from "../pages/sign-up";
 import Auth from "../pages/Auth/Auth"; // Import new authentication page
+import HelloWorld from "../pages/HelloWorld"; // Import HelloWorld page
 
 const router = createBrowserRouter([
   { element: <Index />, path: ROUTES.index },
   { element: <Home />, path: ROUTES.home },
   { element: <SignUp />, path: ROUTES.signUp },
   { element: <Auth />, path: ROUTES.auth }, // New authentication page
+  { element: <HelloWorld />, path: ROUTES.helloWorld }, // HelloWorld page
 ]);
 
 export default router;
