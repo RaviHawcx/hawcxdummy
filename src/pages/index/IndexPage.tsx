@@ -5,7 +5,7 @@ import type { AuthorizedUser } from '../../models'
 import Button from '../../components/Button'
 import createChallenge from '../../utilities/challenge'
 import ErrorModal from '../../components/ErrorModal'
-import { getValue, storeValue } from '../../utilities/persistent-store'
+import { getValue } from '../../utilities/persistent-store'
 import { ROUTES } from '../../constants'
 import Spinner from '../../components/Spinner'
 import './styles.css'
@@ -15,7 +15,7 @@ function Index(): React.JSX.Element {
   const [showErrorModal, setShowErrorModal] = useState<boolean>(false)
   const [webAuthnIsAvailable, setWebAuthnIsAvailable] = useState<boolean>(false)
 
-  const { encoded: challenge } = createChallenge()
+  createChallenge()
 
   const navigate = useNavigate()
 
