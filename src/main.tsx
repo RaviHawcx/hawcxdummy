@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { RouterProvider } from 'react-router-dom'
 import 'common-styles/styles.css'
+import './styles/variables.css'
 
 import Footer from './components/Footer'
 import router from './router'
